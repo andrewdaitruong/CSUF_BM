@@ -14,3 +14,6 @@ def categories(request):
 
 def aboutUs(request):
     return render(request, "aboutUs.html")
+
+def contact(request):
+    return render(request, "contact.html")

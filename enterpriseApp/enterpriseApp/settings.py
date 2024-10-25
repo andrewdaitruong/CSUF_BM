@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
 from pathlib import Path
-from decouple import config
+#from decouple import config
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -22,12 +22,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!s
-SECRET_KEY = config('SECRET_KEY')
+SECRET_KEY = '12@z3il=-pf99#4xkb$dts+vs(*co=9uohwtm$-xw^gc6%k90vpi'
 
 # 10/5
-DEBUG = config('DEBUG', default=False, cast=bool)
+DEBUG = True
 
-ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='127.0.0.1,localhost', cast=lambda v: [s.strip() for s in v.split(',')])
+ALLOWED_HOSTS = ['AllowedHost', '127.0.0.1', '[::1]']
 
 
 # Application definition
@@ -162,14 +162,6 @@ MESSAGE_TAGS = {
     messages.ERROR: 'danger',
 }
 
-# Email Configuration 10/5
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.mailgun.org'
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'postmaster@sandbox1db6c290a2fe4440b8b8b117cde6b41b.mailgun.org'
-EMAIL_HOST_PASSWORD = '473bc8d2c035b03406a637616d951afa-5dcb5e36-fcf505f5'
-DEFAULT_FROM_EMAIL = 'cc1052024@outlook.com'  # Replace with your sender email
 
 # Security enhancements
 CSRF_COOKIE_SECURE = True  # Use only with HTTPS

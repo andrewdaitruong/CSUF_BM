@@ -9,7 +9,7 @@
       "server": "localhost",
       "port": 3306,
       "driver": "MySQL",
-      "name": "ecommerce",
+      "name": "CSUF_BM_DATABASE",
       "database": "ecommerce",
       "username": "root"
     }
